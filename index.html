@@ -34,9 +34,9 @@
 
       <h2>Hello World!</h2>
 
-      <p>My name is Skyler Seto and I'm a second year P.H.D. student in the Department of Statistical Sciences at Cornell University. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science, and received an I.B. diploma from King High School in 2010.</p>
+      <p>My name is Skyler Seto and I'm a third year P.H.D. student in the Department of Statistical Sciences at Cornell University. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science, and received an I.B. diploma from King High School in 2010.</p>
 
-      <p>My research interests include Machine learning, Data Science, Big Data, and Natural Language Processing.  My current research focuses on developing automated data mining and machine learning systems for car destination prediction problems.  </p>
+      <p>My research interests include statistical machine learning, probablistic modeling, approximate inference algorithms, and  big data.  My current research focuses probablistic methods for inferring local ancestry.  </p>
 
       <h2>Research Projects</h2>
 
@@ -49,6 +49,29 @@
 
 
         </TR> 
+
+        <TR>
+          <TD>Automatic Bayesian ARMA Order Determination</TD>
+          <TD>  
+
+          <span id="showHid"> An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.</span>
+          <div id="fo" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHid").onclick = function() {
+                var theDiv = document.getElementById("fo");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.  By estimating the evidence over the lag orders, this paper shows how to use Bayesian model selection for determining the true values of p and q. Evaluating this estimate involves reparametrizing the constrained parameter space and approximating the evidence function using the Laplace method.  In simulations, the proposed method (ABARMA) determines the lag orders more accurately for medium and high order models, and equally in low order models as compared to other methods.  The fit and forecast of the model is also comparable to other methods on real-world data.  <br> <strong> With Wenyu Zhang and Andrew Wilson</strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
 
         <TR>
           <TD>Car Trip Destination Prediction</TD>
@@ -65,7 +88,7 @@
                     this.innerHTML = 'Technological advances in storage paired with more frequent large scale data collection has resulted in massive datasets in many different domains. ';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'Technological advances in storage paired with more frequent large scale data collection has resulted in massive datasets in many different domains. This research develops an automated data science pipeline for organizing and condensing large database formats for machine learning prediction.   Using this framework, 750 GB of automobile trip data is organized and ongoing work is being conducted to predict trip destinations from a mixture of different car signals (such as time, GPS, temperature, radio, etc.). <br /> <strong> With Jason Wu, Kalyan Veeramachanini, and Roy Wedge </strong> ';
+                    this.innerHTML = 'Technological advances in storage paired with more frequent large scale data collection has resulted in massive datasets in many different domains. This research develops an automated data science pipeline for organizing and condensing large database formats for machine learning prediction.   Using this framework, 750 GB of automobile trip data is organized and ongoing work is being conducted to predict trip destinations from a mixture of different car signals (such as time, GPS, temperature, radio, etc.). <br>  <strong> With Jason Wu and Kalyan Veeramachanini</strong> <br /> <strong> Work to appear in Model Factory: A New Way to Look at Data Through Models (Yonglin Wu, M.E. thesis) </strong> ';
                 }
             }
           </script>
@@ -73,12 +96,116 @@
         </TD>
        </TR>
 
+       <TR>
+          <TD><a href="http://arxiv.org/abs/1512.06747"> Human Activity Recognition </a></TD>
+          <TD> 
+          <span id="showHide2"> Accurate and computationally efficient means for classifying human activities have been the subject of extensive research efforts.</span>
+          <div id="foo2" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHide2").onclick = function() {
+                var theDiv = document.getElementById("foo2");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'Accurate and computationally efficient means for classifying human activities have been the subject of extensive research efforts.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = '  Accurate and computationally efficient means for classifying human activities have been the subject of extensive research efforts.  Most current research focuses on extracting complex features to achieve high classification accuracy. This research proposes a template selection approach based on Dynamic Time Warping, such that complex feature extraction and domain knowledge is avoided. The predictive capability of the algorithm is demonstrated to exceed conventional methods in many aspects.  <br /> <strong> With Wenyu Zhang, and Yichen Zhou </strong> <br /> <strong> In Proceedings of the 2015 Symposium Series on Computational Intelligence </strong>';
+                }
+            }
+          </script>
+          </TD>
+       </TR>
 
        <TR>
-          <TD>Caring on Reddit</TD>
+          <TD><a href="files/RIPS.pdf">Maximum Likelihood Detection in MIMO Systems</a></TD>
+          <TD> 
+          <span id="showHide3"> A typical channel communication signal transmission and reception process mainly consists of five stages: encoding, modulation, channel, demodulation and decoding.</span>
+          <div id="foo3" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHide3").onclick = function() {
+                var theDiv = document.getElementById("foo3");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'A typical channel communication signal transmission and reception process mainly consists of five stages: encoding, modulation, channel, demodulation and decoding.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = '  A typical channel communication signal transmission and reception process mainly consists of five stages: encoding, modulation, channel, demodulation and decoding.  Equalization is the process of recovering the original signal from the received, noisy signal during the demodulation stage. This process can be difficult especially for low powered signals.  Modifying existing equalization algorithms, two new equalization algorithms are developed with comparable accuracy and efficiency.  <br /> <strong> With Karen Larson, Albert Ku, Lauren Luo, and Fisher Yu </strong> <br /> <strong> Presented at the 2013 Joint Mathematics Meetings </strong>';
+                }
+            }
+          </script>
+          </TD>
+       </TR>
+
+       <TR>
+          <TD><a href="files/Xiaotao_Skyler_poster.pdf">Bioinformatics Analysis of HDAC-Interacting Proteins</a></TD>
+          <TD> 
+          <span id="showHide4"> Many proteins that have previously been described as protein modification enzymes represent only single members of protein complexes and only function properly together with other factors.</span>
+          <div id="foo4" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHide4").onclick = function() {
+                var theDiv = document.getElementById("foo4");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'Many proteins that have previously been described as protein modification enzymes represent only single members of protein complexes and only function properly together with other factors.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = '  Many proteins that have previously been described as protein modification enzymes represent only single members of protein complexes and only function properly together with other factors.  Using publicly available databases and bioinformatics tools such as BLAST, putative interacting proteins of eighteen human HDACs were identified by constructing a “round trip” between human HDACs and their interacting proteins through homologues in other species that are experimentally verified to interact.  Results not only confirmed many HDAC-interacting proteins previously identified by biochemical and cell biology methods, but also suggested hundreds of potential HDAC-interacting partners that escaped conventional methods of detection. <br /> <strong> With Xiaotao Qu </strong> <br /> <strong> Presented at the American Society for Cell Biology 49th Annual Meeting </strong>';
+                }
+            }
+          </script>
+          </TD>
+       </TR>
+
+      </TABLE>
+
+
+      <h2>Side Projects</h2>
+
+      <p> Additionally, I have contributed to smaller "fun" projects outside of research. I've linked a few of my favorites:
+
+      <TABLE>
+        <TR>
+          <TD>Project</TD>
+          <TD><center> Summary (Click for full summary) </center> </TD>
+
+
+        </TR> 
+
+        <TR>
+          <TD><a href="files/LA Presentation.pdf">GradeExplorer</a></TD>
+
 
           <TD> 
 
+
+          <span id="showHide0"> The central idea of this work is predicting the distribution of student total scores (raw percentages) at the end of the semester.</span>
+          <div id="foo0" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHide0").onclick = function() {
+                var theDiv = document.getElementById("foo0");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'The central idea of this work is predicting the distribution of student total scores (raw percentages) at the end of the semester.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = '  The central idea of this work is predicting the distribution of student total scores (raw percentages) at the end of the semester. We design an algorithm that finds for each student the probability his/her total score will be within some range given his/her available assignment scores, and historical data from prior iterations of the course. A web visualization is also created to help students view their performance relative to peers.<br /> <strong> With Wenyu Zhang, Anton Gilgur, and Erik Andersen </strong> <br /> <strong> Presentation to the Cornell Learning Analytics Group </strong>';
+                }
+            }
+          </script>
+
+
+
+          </TD>
+
+       </TR>
+
+        <TR>
+          <TD>Caring on Reddit</TD>
+          <TD> 
           <span id="showHide1"> Online communities are open to users worldwide, and large websites attract millions of users, but not all of the users keep active in these communities.</span>
           <div id="foo1" style="display:block"></div>
 
@@ -96,110 +223,6 @@
           </script>
 
        </TR>
-
-
-       <TR>
-          <TD><a href="http://arxiv.org/abs/1512.06747"> Human Activity Recognition </a></TD>
-          <TD> 
-
-
-          <span id="showHide2"> Accurate and computationally efficient means for classifying human activities have been the subject of extensive research efforts.</span>
-          <div id="foo2" style="display:block"></div>
-
-          <script>
-            document.getElementById("showHide2").onclick = function() {
-                var theDiv = document.getElementById("foo2");
-                if(theDiv.style.display == 'none') {
-                    theDiv.style.display = 'block';
-                    this.innerHTML = 'Accurate and computationally efficient means for classifying human activities have been the subject of extensive research efforts.';
-                } else {
-                    theDiv.style.display = 'none';
-                    this.innerHTML = '  Accurate and computationally efficient means for classifying human activities have been the subject of extensive research efforts.  Most current research focuses on extracting complex features to achieve high classification accuracy. This research proposes a template selection approach based on Dynamic Time Warping, such that complex feature extraction and domain knowledge is avoided. The predictive capability of the algorithm is demonstrated to exceed conventional methods in many aspects.  <br /> <strong> With Wenyu Zhang, and Yichen Zhou </strong> <br /> <strong> In Proceedings of the 2015 Symposium Series on Computational Intelligence </strong>';
-                }
-            }
-          </script>
-
-
-
-          </TD>
-       </TR>
-
-
-       <TR>
-          <TD><a href="files/RIPS.pdf">Maximum Likelihood Detection in MIMO Systems</a></TD>
-
-
-          <TD> 
-
-
-          <span id="showHide3"> A typical channel communication signal transmission and reception process mainly consists of five stages: encoding, modulation, channel, demodulation and decoding.</span>
-          <div id="foo3" style="display:block"></div>
-
-          <script>
-            document.getElementById("showHide3").onclick = function() {
-                var theDiv = document.getElementById("foo3");
-                if(theDiv.style.display == 'none') {
-                    theDiv.style.display = 'block';
-                    this.innerHTML = 'A typical channel communication signal transmission and reception process mainly consists of five stages: encoding, modulation, channel, demodulation and decoding.';
-                } else {
-                    theDiv.style.display = 'none';
-                    this.innerHTML = '  A typical channel communication signal transmission and reception process mainly consists of five stages: encoding, modulation, channel, demodulation and decoding.  Equalization is the process of recovering the original signal from the received, noisy signal during the demodulation stage. This process can be difficult especially for low powered signals.  Modifying existing equalization algorithms, two new equalization algorithms are developed with comparable accuracy and efficiency.  <br /> <strong> With Karen Larson, Albert Ku, Lauren Luo, and Fisher Yu </strong> <br /> <strong> Presented at the 2013 Joint Mathematics Meetings </strong>';
-                }
-            }
-          </script>
-
-
-
-          </TD>
-
-
-       </TR>
-
-
-       <TR>
-          <TD><a href="files/Xiaotao_Skyler_poster.pdf">Bioinformatics Analysis of HDAC-Interacting Proteins</a></TD>
-
-
-          <TD> 
-
-
-          <span id="showHide4"> Many proteins that have previously been described as protein modification enzymes represent only single members of protein complexes and only function properly together with other factors.</span>
-          <div id="foo4" style="display:block"></div>
-
-          <script>
-            document.getElementById("showHide4").onclick = function() {
-                var theDiv = document.getElementById("foo4");
-                if(theDiv.style.display == 'none') {
-                    theDiv.style.display = 'block';
-                    this.innerHTML = 'Many proteins that have previously been described as protein modification enzymes represent only single members of protein complexes and only function properly together with other factors.';
-                } else {
-                    theDiv.style.display = 'none';
-                    this.innerHTML = '  Many proteins that have previously been described as protein modification enzymes represent only single members of protein complexes and only function properly together with other factors.  Using publicly available databases and bioinformatics tools such as BLAST, putative interacting proteins of eighteen human HDACs were identified by constructing a “round trip” between human HDACs and their interacting proteins through homologues in other species that are experimentally verified to interact.  Results not only confirmed many HDAC-interacting proteins previously identified by biochemical and cell biology methods, but also suggested hundreds of potential HDAC-interacting partners that escaped conventional methods of detection. <br /> <strong> With Xiaotao Qu </strong> <br /> <strong> Presented at the American Society for Cell Biology 49th Annual Meeting </strong>';
-                }
-            }
-          </script>
-
-
-
-          </TD>
-
-
-       </TR>
-
-
-      </TABLE>
-
-      <h2>Fun Projects</h2>
-
-      <p> Additionally, I have contributed to smaller "fun" projects outside of research. I've linked a few of my favorites:
-
-      <TABLE>
-        <TR>
-          <TD>Project</TD>
-          <TD><center> Summary (Click for full summary) </center> </TD>
-
-
-        </TR> 
 
         <TR>
           <TD><a href="files/18.821 Paper 2.pdf">Dynamical Systems with Polygons</a></TD>
