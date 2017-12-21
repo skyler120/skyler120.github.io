@@ -22,7 +22,7 @@
         <p class="view"><a href="http://github.com/orderedlist/modernist">View the Project on GitHub <small>orderedlist/modernist</small></a></p>
         <ul>
           <li><a href="files/website_resume.pdf">Download <strong>Resume</strong></a></li>
-          <li><a href="https://www.linkedin.com/pub/skyler-seto/38/789/309">View On  <strong>LinkedIn</strong></a></li>
+          <li><a href="https://www.linkedin.com/pub/skyler-seto/38/789/309">Connect On  <strong>LinkedIn</strong></a></li>
           <li><a href="https://github.com/skyler120">View On  <strong>GitHub</strong></a></li>
         </ul>
       </header>
@@ -34,9 +34,11 @@
 
       <h2>Hello World!</h2>
 
-      <p>My name is Skyler Seto and I'm a third year P.H.D. student in the Department of Statistical Sciences at Cornell University. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science, and received an I.B. diploma from King High School in 2010.</p>
+      <p>My name is Skyler Seto and I'm a fourth year P.H.D. student in the Department of Statistical Sciences at Cornell University. I recently received my master's degree in Statistics from Cornell in December 2017. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science, and received an I.B. diploma from King High School in 2010.</p>
 
-      <p>My research interests include statistical machine learning, probablistic modeling, approximate inference algorithms, and  big data.  My current research focuses probablistic methods for inferring local ancestry.  </p>
+      <p>My research interests include statistical machine learning, matrix and tensor decompositions, and natural language processing.  My current research focuses on devloping a statistical understanding of different word representation models.  </p>
+
+      <p>My previous industry experiences include internships and work with researchers at Amazon Alexa, Riot Games, and Huawei. </p>
 
       <h2>Research Projects</h2>
 
@@ -51,15 +53,38 @@
         </TR> 
 
         <TR>
+          <TD>Understanding GloVe Embeddings via GLMs</TD>
+          <TD>  
+
+          <span id="showHidWE"> The popular GloVe word embedding model learns word vectors by factorizing a matrix of word-word co-occurrences. In this work, we offer a novel interpretation of GloVe based on generalized linear models.</span>
+          <div id="foWE" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidWE").onclick = function() {
+                var theDiv = document.getElementById("foWE");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'The popular GloVe word embedding model learns word vectors by factorizing a matrix of word-word co-occurrences. In this work, we offer a novel interpretation of GloVe based on generalized linear models';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'The popular GloVe word embedding model learns word vectors by factorizing a matrix of word-word co-occurrences. In this work, we offer a novel interpretation of GloVe based on generalized linear models, a flexible generalization of ordinary linear regression. This interpretation leads to a new algorithm for computing word embeddings, and better distributional assumptions for word- word cooccurence models.   <br> <strong> With Ben Baer, Yoav Artzi, and Martin T. Wells</strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+        <TR>
           <TD>Automatic Bayesian ARMA Order Determination</TD>
           <TD>  
 
           <span id="showHid"> An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.</span>
-          <div id="fo" style="display:block"></div>
+          <div id="fo0" style="display:block"></div>
 
           <script>
             document.getElementById("showHid").onclick = function() {
-                var theDiv = document.getElementById("fo");
+                var theDiv = document.getElementById("fo0");
                 if(theDiv.style.display == 'none') {
                     theDiv.style.display = 'block';
                     this.innerHTML = 'An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.';
@@ -73,11 +98,34 @@
         </TD>
        </TR>
 
-        <TR>
-          <TD>Car Trip Destination Prediction</TD>
+       <TR>
+          <TD> <a href="https://arxiv.org/abs/1711.07104"> A Double Parametric Bootstrap Test for Topic Models </a> </TD>
           <TD>  
 
-          <span id="showHide"> Technological advances in storage paired with more frequent large scale data collection has resulted in massive datasets in many different domains. </span>
+          <span id="showHidDPBS"> Non-negative matrix factorization (NMF) is a technique for finding latent representations of data.</span>
+          <div id="fo1" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidDPBS").onclick = function() {
+                var theDiv = document.getElementById("fo1");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'Non-negative matrix factorization (NMF) is a technique for finding latent representations of data.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'Non-negative matrix factorization (NMF) is a technique for finding latent representations of data. The method has been applied to corpora to construct topic models. However, NMF has likelihood assumptions which are often violated by real document corpora. We present a double parametric bootstrap test for evaluating the fit of an NMF-based topic model based on the duality of the KL divergence and Poisson maximum likelihood estimation. The test correctly identifies whether a topic model based on an NMF approach yields reliable results in simulated and real data. <br> <strong> With Sarah Tan, Giler Hooker, and Martin T. Wells</strong> </br> <strong> Presented at the 2015 NIPS Symposium on Interpretable Machine Learning </strong> <a href="files/poster-double-parametric.pdf">Poster Presentation</a>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+        <TR>
+          <TD> <a href="https://dspace.mit.edu/handle/1721.1/106392"> Car Trip Destination Prediction </a> </TD>
+          <TD>  
+          
+          <span id="showHide"> This research develops an automated data science pipeline for organizing and condensing large database formats into event-driven time series data for machine learning prediction. </span>
           <div id="foo" style="display:block"></div>
 
           <script>
@@ -85,10 +133,10 @@
                 var theDiv = document.getElementById("foo");
                 if(theDiv.style.display == 'none') {
                     theDiv.style.display = 'block';
-                    this.innerHTML = 'Technological advances in storage paired with more frequent large scale data collection has resulted in massive datasets in many different domains. ';
+                    this.innerHTML = 'This research develops an automated data science pipeline for organizing and condensing large database formats into event-driven time series data for machine learning prediction.';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'Technological advances in storage paired with more frequent large scale data collection has resulted in massive datasets in many different domains. This research develops an automated data science pipeline for organizing and condensing large database formats for machine learning prediction.   Using this framework, 750 GB of automobile trip data is organized and ongoing work is being conducted to predict trip destinations from a mixture of different car signals (such as time, GPS, temperature, radio, etc.). <br>  <strong> With Jason Wu and Kalyan Veeramachanini</strong> <br /> <strong> Work to appear in Model Factory: A New Way to Look at Data Through Models (Yonglin Wu, M.E. thesis) </strong> ';
+                    this.innerHTML = 'This research develops an automated data science pipeline for organizing and condensing large database formats into event-driven time series data for machine learning prediction.   Using this framework, a large collection of automobile trip data is organized and 3.8 million prediction problems are generated from a mixture of different car signals (such as time, GPS, temperature, radio, etc.) and analyzed. <br>  <strong> With Jason Wu and Kalyan Veeramachanini</strong> <br /> <strong> Work to appear in Model Factory: A New Way to Look at Data Through Models (Yonglin Wu, M.E. thesis Section 4.1.1 and Appendix A) </strong> ';
                 }
             }
           </script>
@@ -204,7 +252,7 @@
        </TR>
 
         <TR>
-          <TD>Caring on Reddit</TD>
+          <TD><a href="files/6742_presentation.pdf"> Caring on Reddit</a> </TD>
           <TD> 
           <span id="showHide1"> Online communities are open to users worldwide, and large websites attract millions of users, but not all of the users keep active in these communities.</span>
           <div id="foo1" style="display:block"></div>
