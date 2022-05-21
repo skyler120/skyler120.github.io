@@ -34,11 +34,11 @@
 
       <h2>Hello World!</h2>
 
-      <p>My name is Skyler Seto and I'm a fourth year P.H.D. student in the Department of Statistical Sciences at Cornell University. I recently received my master's degree in Statistics from Cornell in December 2017. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science, and received an I.B. diploma from King High School in 2010.</p>
+      <p>My name is Skyler Seto and I'm a Machine Learning researcher at Apple.  Previously I received my P.H.D. from the Department of Statistics and Data Science at Cornell University in 2020 under the supervision of Martin T. Wells, Andrew Wilson, and Thorsten Joachims. I also received my master's degree in Computer Science from Cornell. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science.</p>
 
-      <p>My research interests include statistical machine learning, matrix and tensor decompositions, and natural language processing.  My current research focuses on devloping a statistical understanding of different word representation models.  </p>
+      <p>My research interests are at the intersections of adaptive and conditional computation, model compression, and model fairness and robustness.  I work on developing models and algorithms that adaptively use model compute and data to better generalize based on inherent data difficulty. </p>
 
-      <p>My previous industry experiences include internships and work with researchers at Amazon Alexa, Riot Games, and Huawei. </p>
+      <p>My previous industry experiences include internships and work with researchers at Amazon Alexa and Riot Games, and I have done academic work in collaboration with Huawei and Toyota. </p>
 
       <h2>Research Projects</h2>
 
@@ -53,21 +53,46 @@
         </TR> 
 
         <TR>
-          <TD>Understanding GloVe Embeddings via GLMs</TD>
+          <TD> <a href="https://arxiv.org/pdf/2203.10117.pdf"> Towards a Perceptual Model for Estimating the Quality of Visual Speech </a> </TD>
           <TD>  
 
-          <span id="showHidWE"> The popular GloVe word embedding model learns word vectors by factorizing a matrix of word-word co-occurrences. In this work, we offer a novel interpretation of GloVe based on generalized linear models.</span>
-          <div id="foWE" style="display:block"></div>
+          <span id="showHidLip"> Generating realistic lip motions to simulate speech production is key for driving natural character animations from audio. Previous research has shown that traditional metrics used to optimize and assess models for generating lip motions from speech are not a good indicator of subjective opinion of animation quality.   </span>
+          <div id="foLip" style="display:block"></div>
 
           <script>
-            document.getElementById("showHidWE").onclick = function() {
-                var theDiv = document.getElementById("foWE");
+            document.getElementById("showHidLip").onclick = function() {
+                var theDiv = document.getElementById("foLip");
                 if(theDiv.style.display == 'none') {
                     theDiv.style.display = 'block';
-                    this.innerHTML = 'The popular GloVe word embedding model learns word vectors by factorizing a matrix of word-word co-occurrences. In this work, we offer a novel interpretation of GloVe based on generalized linear models';
+                    this.innerHTML = 'Generating realistic lip motions to simulate speech production is key for driving natural character animations from audio. Previous research has shown that traditional metrics used to optimize and assess models for generating lip motions from speech are not a good indicator of subjective opinion of animation quality.  ';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'The popular GloVe word embedding model learns word vectors by factorizing a matrix of word-word co-occurrences. In this work, we offer a novel interpretation of GloVe based on generalized linear models, a flexible generalization of ordinary linear regression. This interpretation leads to a new algorithm for computing word embeddings, and better distributional assumptions for word- word cooccurence models.   <br> <strong> With Ben Baer, Yoav Artzi, and Martin T. Wells</strong> </br>';
+                    this.innerHTML = 'Generating realistic lip motions to simulate speech production is key for driving natural character animations from audio. Previous research has shown that traditional metrics used to optimize and assess models for generating lip motions from speech are not a good indicator of subjective opinion of animation quality. Yet, running repetitive subjective studies for assessing the quality of animations can be time-consuming and difficult to replicate. In this work, we seek to understand the relationship between perturbed lip motion and subjective opinion of lip motion quality. Specifically, we adjust the degree of articulation for lip motion sequences and run a user-study to examine how this adjustment impacts the perceived quality of lip motion. We then train a model using the scores collected from our user-study to automatically predict the subjective quality of an animated sequence. Our results show that (1) users score lip motions with slight over-articulation the highest in terms of perceptual quality; (2) under-articulation had a more detrimental effect on perceived quality of lip motion compared to the effect of over-articulation; and (3) we can automatically estimate the subjective perceptual score for a given lip motion sequences with low error rates.     <br> <strong> With Zak Aldeneh, Masha Fedzechkina, Katherine Metcalf, Miguel Sarabia, Nicholas Apostoloff, and Barry-John Theobald </strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+       </TR> 
+
+        <TR>
+          <TD> <a href="https://arxiv.org/pdf/2202.01719.pdf"> FORML: Learning to Reweight Data for Fairness </a> </TD>
+          <TD>  
+
+          <span id="showHidFORM"> Deployed machine learning models are evaluated by multiple metrics beyond accuracy, such as fairness and robustness. However, such models are typically trained to minimize the average loss for a single metric, which is typically a proxy for accuracy.   </span>
+          <div id="foFORM" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidFORM").onclick = function() {
+                var theDiv = document.getElementById("foFORM");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'GDeployed machine learning models are evaluated by multiple metrics beyond accuracy, such as fairness and robustness. However, such models are typically trained to minimize the average loss for a single metric, which is typically a proxy for accuracy.  ';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'Deployed machine learning models are evaluated by multiple metrics beyond accuracy, such as fairness and robustness. However, such models are typically trained to minimize the average loss for a single metric, which is typically a proxy for accuracy. Training to optimize a single metric leaves these models prone to fairness violations, especially when the population of sub-groups in the training data are imbalanced. This work addresses the challenge of jointly optimizing fairness and predictive performance in the multi-class classification setting by introducing Fairness Optimized Reweighting via Meta-Learning (FORML), a training algorithm that balances fairness constraints and accuracy by jointly optimizing training sample weights and a neural networks parameters. The approach increases fairness by learning to weight each training datums contribution to the loss according to its impact on reducing fairness violations, balancing the contributions from both over- and under-represented sub-groups. We empirically validate FORML on a range of benchmark and real-world classification datasets and show that our approach improves equality of opportunity fairness criteria over existing state-of-the-art reweighting methods by approximately 1% on image classification tasks and by approximately 5% on a face attribute prediction task. This improvement is achieved without pre-processing data or post-processing model outputs, without learning an additional weighting function, and while maintaining accuracy on the original predictive metric.    <br> <strong> With Bobby Yan, and Nicholas Apostoloff</strong> </br>';
                 }
             }
           </script>
@@ -76,27 +101,75 @@
        </TR>
 
         <TR>
-          <TD>Automatic Bayesian ARMA Order Determination</TD>
+          <TD> <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611976700.63"> HALO: Learning to Prune Neural Networks with Shrinkage </a> </TD>
           <TD>  
 
-          <span id="showHid"> An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.</span>
-          <div id="fo0" style="display:block"></div>
+          <span id="showHidHALO"> Deep neural networks achieve state-of-the-art performance in a variety of tasks by extracting a rich set of features from unstructured data, however this performance is closely tied to model size. </span>
+          <div id="foHALO" style="display:block"></div>
 
           <script>
-            document.getElementById("showHid").onclick = function() {
-                var theDiv = document.getElementById("fo0");
+            document.getElementById("showHidHALO").onclick = function() {
+                var theDiv = document.getElementById("foHALO");
                 if(theDiv.style.display == 'none') {
                     theDiv.style.display = 'block';
-                    this.innerHTML = 'An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.';
+                    this.innerHTML = 'Deep neural networks achieve state-of-the-art performance in a variety of tasks by extracting a rich set of features from unstructured data, however this performance is closely tied to model size.';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'An obstacle in employing ARMA models for time series modelling is choosing the correct autoregressive and moving average lag orders p and q.  By estimating the evidence over the lag orders, this paper shows how to use Bayesian model selection for determining the true values of p and q. Evaluating this estimate involves reparametrizing the constrained parameter space and approximating the evidence function using the Laplace method.  In simulations, the proposed method (ABARMA) determines the lag orders more accurately for medium and high order models, and equally in low order models as compared to other methods.  The fit and forecast of the model is also comparable to other methods on real-world data.  <br> <strong> With Wenyu Zhang and Andrew Wilson</strong> </br>';
+                    this.innerHTML = 'Deep neural networks achieve state-of-the-art performance in a variety of tasks by extracting a rich set of features from unstructured data, however this performance is closely tied to model size. Modern techniques for inducing sparsity and reducing model size are (1) network pruning, (2) training with a sparsity inducing penalty, and (3) training a binary mask jointly with the weights of the network. We study these approaches from the perspective of Bayesian hierarchical models and present a novel penalty called Hierarchical Adaptive Lasso (HALO) which learns to sparsify weights of a given network via trainable parameters. When used to train over-parametrized networks, our penalty yields small subnetworks with high accuracy without fine-tuning. Empirically, on image recognition tasks, we find that HALO is able to learn highly sparse network (only 5% of the parameters) with significant gains in performance over state-of-the-art magnitude pruning methods at the same level of sparsity. Code and appendix are available at the provided links.   <br> <strong> With Martin T. Wells, and Wenyu Zhang</strong> </br> <strong> SIAM International Conference on Data Mining </strong>';
                 }
             }
           </script>
 
         </TD>
        </TR>
+
+
+        <TR>
+          <TD> <a href="https://arxiv.org/pdf/2003.11696.pdf"> CAZSL: Zero-Shot Regression for Pushing Models by Generalizing Through Context </a> </TD>
+          <TD>  
+
+          <span id="showHideCAZSL"> Learning accurate models of the physical world is required for a lot of robotic manipulation tasks. However, during manipulation, robots are expected to interact with un-known workpieces so that building predictive models which can generalize over a number of these objects is highly desirable. </span>
+          <div id="foCAZSL" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHideCAZSL").onclick = function() {
+                var theDiv = document.getElementById("foCAZSL");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'Learning accurate models of the physical world is required for a lot of robotic manipulation tasks. However, during manipulation, robots are expected to interact with un-known workpieces so that building predictive models which can generalize over a number of these objects is highly desirable.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'Learning accurate models of the physical world is required for a lot of robotic manipulation tasks. However, during manipulation, robots are expected to interact with un-known workpieces so that building predictive models which can generalize over a number of these objects is highly desirable. In this paper, we study the problem of designing deep learning agents which can generalize their models of the physical world by building context-aware learning models. The purpose of these agents is to quickly adapt and/or generalize their notion of physics of interaction in the real world based on certain features about the interacting objects that provide different contexts to the predictive models. With this motivation, we present context-aware zero shot learning (CAZSL, pronounced as casual) models, an approach utilizing a Siamese network architecture, embedding space masking and regularization based on context variables which allows us to learn a model that can generalize to different parameters or features of the interacting objects. We test our proposed learning algorithm on the recently released Omnipush datatset that allows testing of meta-learning capabilities using low-dimensional data. Codes for CAZSL are available at https://www.merl.com/research/license/CAZSL.   <br> <strong> With Wenyu Zhang, and Devesh K. Jha</strong> </br> <strong> Presented at the 2015 NIPS Symposium on Interpretable Machine Learning </strong>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+        <TR>
+          <TD> <a href="https://openreview.net/pdf?id=rJgjYyaio7"> Exponential Family Word Embeddings </a> </TD>
+          <TD>  
+
+          <span id="showHidWE"> GloVe and Skip-gram word embedding methods learn word vectors by decomposing a denoised matrix of word co-occurrences into a product of low-rank matrices. In this work, we propose an iterative algorithm for computing word vectors based on modeling word co-occurrence matrices with Generalized Low Rank Models. </span>
+          <div id="foWE" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidWE").onclick = function() {
+                var theDiv = document.getElementById("foWE");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'GloVe and Skip-gram word embedding methods learn word vectors by decomposing a denoised matrix of word co-occurrences into a product of low-rank matrices. In this work, we propose an iterative algorithm for computing word vectors based on modeling word co-occurrence matrices with Generalized Low Rank Models.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'GloVe and Skip-gram word embedding methods learn word vectors by decomposing a denoised matrix of word co-occurrences into a product of low-rank matrices. In this work, we propose an iterative algorithm for computing word vectors based on modeling word co-occurrence matrices with Generalized Low Rank Models. Our algorithm generalizes both Skip-gram and GloVe as well as giving rise to other embedding methods based on the specified co-occurrence matrix, distribution of co-occurences, and the number of iterations in the iterative algorithm. For example, using a Tweedie distribution with one iteration results in GloVe and using a Multinomial distribution with full-convergence mode results in Skip-gram. Experimental results demonstrate that multiple iterations of our algorithm improves results over the GloVe method on the Google word analogy similarity task.   <br> <strong> With Ben Baer, and Martin T. Wells</strong> </br> <strong> Presented at the 2018 NIPS IRASL Workshop';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
 
        <TR>
           <TD> <a href="https://arxiv.org/abs/1711.07104"> A Double Parametric Bootstrap Test for Topic Models </a> </TD>
@@ -113,7 +186,7 @@
                     this.innerHTML = 'Non-negative matrix factorization (NMF) is a technique for finding latent representations of data.';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'Non-negative matrix factorization (NMF) is a technique for finding latent representations of data. The method has been applied to corpora to construct topic models. However, NMF has likelihood assumptions which are often violated by real document corpora. We present a double parametric bootstrap test for evaluating the fit of an NMF-based topic model based on the duality of the KL divergence and Poisson maximum likelihood estimation. The test correctly identifies whether a topic model based on an NMF approach yields reliable results in simulated and real data. <br> <strong> With Sarah Tan, Giler Hooker, and Martin T. Wells</strong> </br> <strong> Presented at the 2015 NIPS Symposium on Interpretable Machine Learning </strong> <a href="files/poster-double-parametric.pdf">Poster Presentation</a>';
+                    this.innerHTML = 'Non-negative matrix factorization (NMF) is a technique for finding latent representations of data. The method has been applied to corpora to construct topic models. However, NMF has likelihood assumptions which are often violated by real document corpora. We present a double parametric bootstrap test for evaluating the fit of an NMF-based topic model based on the duality of the KL divergence and Poisson maximum likelihood estimation. The test correctly identifies whether a topic model based on an NMF approach yields reliable results in simulated and real data. <br> <strong> With Sarah Tan, Giler Hooker, and Martin T. Wells</strong> </br> <strong> Presented at the 2017 NIPS Symposium on Interpretable Machine Learning </strong> <a href="files/poster-double-parametric.pdf">Poster Presentation</a>';
                 }
             }
           </script>
