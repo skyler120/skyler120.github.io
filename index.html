@@ -36,9 +36,9 @@
 
       <p>My name is Skyler Seto and I'm a Machine Learning researcher at Apple.  Previously I received my P.H.D. from the Department of Statistics and Data Science at Cornell University in 2020 under the supervision of Martin T. Wells, Andrew Wilson, and Thorsten Joachims. I also received my master's degree in Computer Science from Cornell. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science.</p>
 
-      <p>My research interests are at the intersections of adaptive and conditional computation, model compression, and model fairness and robustness.  I work on developing models and algorithms that adaptively use model compute and data to better generalize based on inherent data difficulty. </p>
+      <p>My research interests are at the intersections of conditional computation, model compression, and model fairness and robustness.  I work on developing models and algorithms that adaptively use model compute and data to better generalize based on inherent data difficulty. </p>
 
-      <p>My previous industry experiences include internships and work with researchers at Amazon Alexa and Riot Games, and I have done academic work in collaboration with Huawei and Toyota. </p>
+      <p>My previous industry experiences include internships with researchers at Amazon Alexa and Riot Games, and I have done academic work in collaboration with Huawei and Toyota. </p>
 
       <h2>Research Projects</h2>
 
@@ -115,7 +115,7 @@
                     this.innerHTML = 'Deep neural networks achieve state-of-the-art performance in a variety of tasks by extracting a rich set of features from unstructured data, however this performance is closely tied to model size.';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'Deep neural networks achieve state-of-the-art performance in a variety of tasks by extracting a rich set of features from unstructured data, however this performance is closely tied to model size. Modern techniques for inducing sparsity and reducing model size are (1) network pruning, (2) training with a sparsity inducing penalty, and (3) training a binary mask jointly with the weights of the network. We study these approaches from the perspective of Bayesian hierarchical models and present a novel penalty called Hierarchical Adaptive Lasso (HALO) which learns to sparsify weights of a given network via trainable parameters. When used to train over-parametrized networks, our penalty yields small subnetworks with high accuracy without fine-tuning. Empirically, on image recognition tasks, we find that HALO is able to learn highly sparse network (only 5% of the parameters) with significant gains in performance over state-of-the-art magnitude pruning methods at the same level of sparsity. Code and appendix are available at the provided links.   <br> <strong> With Martin T. Wells, and Wenyu Zhang</strong> </br> <strong> SIAM International Conference on Data Mining </strong>';
+                    this.innerHTML = 'Deep neural networks achieve state-of-the-art performance in a variety of tasks by extracting a rich set of features from unstructured data, however this performance is closely tied to model size. Modern techniques for inducing sparsity and reducing model size are (1) network pruning, (2) training with a sparsity inducing penalty, and (3) training a binary mask jointly with the weights of the network. We study these approaches from the perspective of Bayesian hierarchical models and present a novel penalty called Hierarchical Adaptive Lasso (HALO) which learns to sparsify weights of a given network via trainable parameters. When used to train over-parametrized networks, our penalty yields small subnetworks with high accuracy without fine-tuning. Empirically, on image recognition tasks, we find that HALO is able to learn highly sparse network (only 5% of the parameters) with significant gains in performance over state-of-the-art magnitude pruning methods at the same level of sparsity. Code and appendix are available at the provided links.   <br> <strong> With Martin T. Wells, and Wenyu Zhang</strong> </br> <strong> Presented at SIAM International Conference on Data Mining </strong>';
                 }
             }
           </script>
@@ -139,7 +139,7 @@
                     this.innerHTML = 'Learning accurate models of the physical world is required for a lot of robotic manipulation tasks. However, during manipulation, robots are expected to interact with un-known workpieces so that building predictive models which can generalize over a number of these objects is highly desirable.';
                 } else {
                     theDiv.style.display = 'none';
-                    this.innerHTML = 'Learning accurate models of the physical world is required for a lot of robotic manipulation tasks. However, during manipulation, robots are expected to interact with un-known workpieces so that building predictive models which can generalize over a number of these objects is highly desirable. In this paper, we study the problem of designing deep learning agents which can generalize their models of the physical world by building context-aware learning models. The purpose of these agents is to quickly adapt and/or generalize their notion of physics of interaction in the real world based on certain features about the interacting objects that provide different contexts to the predictive models. With this motivation, we present context-aware zero shot learning (CAZSL, pronounced as casual) models, an approach utilizing a Siamese network architecture, embedding space masking and regularization based on context variables which allows us to learn a model that can generalize to different parameters or features of the interacting objects. We test our proposed learning algorithm on the recently released Omnipush datatset that allows testing of meta-learning capabilities using low-dimensional data. Codes for CAZSL are available at https://www.merl.com/research/license/CAZSL.   <br> <strong> With Wenyu Zhang, and Devesh K. Jha</strong> </br> <strong> Presented at the 2015 NIPS Symposium on Interpretable Machine Learning </strong>';
+                    this.innerHTML = 'Learning accurate models of the physical world is required for a lot of robotic manipulation tasks. However, during manipulation, robots are expected to interact with un-known workpieces so that building predictive models which can generalize over a number of these objects is highly desirable. In this paper, we study the problem of designing deep learning agents which can generalize their models of the physical world by building context-aware learning models. The purpose of these agents is to quickly adapt and/or generalize their notion of physics of interaction in the real world based on certain features about the interacting objects that provide different contexts to the predictive models. With this motivation, we present context-aware zero shot learning (CAZSL, pronounced as casual) models, an approach utilizing a Siamese network architecture, embedding space masking and regularization based on context variables which allows us to learn a model that can generalize to different parameters or features of the interacting objects. We test our proposed learning algorithm on the recently released Omnipush datatset that allows testing of meta-learning capabilities using low-dimensional data. Codes for CAZSL are available at https://www.merl.com/research/license/CAZSL.   <br> <strong> With Wenyu Zhang, and Devesh K. Jha</strong> </br> <strong> Presented at the International Conference on Intelligent Robots and Systems (IROS) 2020 </strong>';
                 }
             }
           </script>
@@ -187,29 +187,6 @@
                 } else {
                     theDiv.style.display = 'none';
                     this.innerHTML = 'Non-negative matrix factorization (NMF) is a technique for finding latent representations of data. The method has been applied to corpora to construct topic models. However, NMF has likelihood assumptions which are often violated by real document corpora. We present a double parametric bootstrap test for evaluating the fit of an NMF-based topic model based on the duality of the KL divergence and Poisson maximum likelihood estimation. The test correctly identifies whether a topic model based on an NMF approach yields reliable results in simulated and real data. <br> <strong> With Sarah Tan, Giler Hooker, and Martin T. Wells</strong> </br> <strong> Presented at the 2017 NIPS Symposium on Interpretable Machine Learning </strong> <a href="files/poster-double-parametric.pdf">Poster Presentation</a>';
-                }
-            }
-          </script>
-
-        </TD>
-       </TR>
-
-        <TR>
-          <TD> <a href="https://dspace.mit.edu/handle/1721.1/106392"> Car Trip Destination Prediction </a> </TD>
-          <TD>  
-          
-          <span id="showHide"> This research develops an automated data science pipeline for organizing and condensing large database formats into event-driven time series data for machine learning prediction. </span>
-          <div id="foo" style="display:block"></div>
-
-          <script>
-            document.getElementById("showHide").onclick = function() {
-                var theDiv = document.getElementById("foo");
-                if(theDiv.style.display == 'none') {
-                    theDiv.style.display = 'block';
-                    this.innerHTML = 'This research develops an automated data science pipeline for organizing and condensing large database formats into event-driven time series data for machine learning prediction.';
-                } else {
-                    theDiv.style.display = 'none';
-                    this.innerHTML = 'This research develops an automated data science pipeline for organizing and condensing large database formats into event-driven time series data for machine learning prediction.   Using this framework, a large collection of automobile trip data is organized and 3.8 million prediction problems are generated from a mixture of different car signals (such as time, GPS, temperature, radio, etc.) and analyzed. <br>  <strong> With Jason Wu and Kalyan Veeramachanini</strong> <br /> <strong> Work to appear in Model Factory: A New Way to Look at Data Through Models (Yonglin Wu, M.E. thesis Section 4.1.1 and Appendix A) </strong> ';
                 }
             }
           </script>
@@ -294,6 +271,31 @@
 
 
         </TR> 
+
+       https://jointmathematicsmeetings.org/amsmtgs/2217_abstracts/1145-k5-2215.pdf
+
+        <TR>
+          <TD> Vehicle Routing Prediction </TD>
+          <TD>  
+          
+          <span id="showHideVRP"> The central idea of work in this area focuses on predicting vehicle destination and optimizing vehicle routing based on large databases of vehicle and passenger data.  </span>
+          <div id="fooVRP" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHideVRP").onclick = function() {
+                var theDiv = document.getElementById("fooVRP");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'The central idea of work in this area focuses on predicting vehicle destination and optimizing vehicle routing based on large databases of vehicle and passenger data.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'The central idea of work in this area focuses on predicting vehicle destination and optimizing vehicle routing based on large databases of vehicle and passenger data. In prior work, we examined real data from the Miyagi government in Japan in collaboration with Toyota to optimize self-driving electric vehicle routing [<a href="https://jointmathematicsmeetings.org/amsmtgs/2217_abstracts/1145-k5-2215.pdf">Presented at JMM</a>]. I also previously contributed to building automated data pipelines from a large collection of proprietary automobile trip data for predicting a mixture of different car signals (such as time, GPS, temperature, radio, etc.) while at MIT [<a href="https://dspace.mit.edu/handle/1721.1/106392">Precursor work that was featured in an M.E. thesis</a>]. Finally, in 2011 I was a SMART Undergraduate Research Fellow (SMURF) at NUS working on the SimMobility platform.';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
 
         <TR>
           <TD><a href="files/LA Presentation.pdf">GradeExplorer</a></TD>
