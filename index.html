@@ -34,11 +34,13 @@
 
       <h2>Hello World!</h2>
 
-      <p>My name is Skyler Seto and I'm a Machine Learning researcher at Apple.  Previously I received my P.H.D. from the Department of Statistics and Data Science at Cornell University in 2020 under the supervision of Martin T. Wells, Andrew Wilson, and Thorsten Joachims. I also received my master's degree in Computer Science from Cornell. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science.</p>
+      <p>My name is Skyler Seto and I'm a Research Scientist on the Machine Learning Research team at Apple.  Previously I received my P.H.D. from the Department of Statistics and Data Science at Cornell University in 2020 under the supervision of Martin T. Wells, Andrew Wilson, and Thorsten Joachims. I also received my master's degree in Computer Science from Cornell. I graduated from MIT in 2014 with a degree in Mathematics with Computer Science.</p>
 
-      <p>My research interests are at the intersections of conditional computation, model compression, and model fairness and robustness.  I work on developing models and algorithms that adaptively use model compute and data to better generalize based on inherent data difficulty. </p>
+      <p>The goal of my research is to understand the limits of current machine learning systems, and to improve their reliability in the real world. I work on and am interested in improving model robustness at all stages including dataset development, training algorithms, and fine-tuning pre-trained models. </p>
 
       <p>My previous industry experiences include internships with researchers at Amazon Alexa and Riot Games, and I have done academic work in collaboration with Huawei and Toyota. </p>
+
+      <p>I am fortunate to have had the opportunity to mentor and work with many amazing students while at Apple including Bobby Yan (Stanford PhD), Akshay Mehra (Tulane PhD), and Pratyush Maini (CMU PhD).  I am also an Apple AIML Scholar co-mentor for Yong Lin (HKUST). </p>
 
       <h2>Research Projects</h2>
 
@@ -51,6 +53,104 @@
 
 
         </TR> 
+
+        <TR>
+          <TD> <a href=""> Rephrase not Repeat: Improving Language Modeling with High-Quality Synthetic Data </a> </TD>
+          <TD>  
+
+          <span id="showHidRephrase"> The use of synthetic data has gained prominence in the paradigm of aligning pre-trained LLMs via instruction fine-tuning, and RLHF. For pre-training researchers have long relied on massive scrapes of the web to gather data. However, with model size growing, neural scaling laws suggest that we might run out of sufficient training data very soon.  Akin to fine-tuning, pre-training on machine-generated data serves as a viable alternative. However, there is little understanding of how synthetic data from LLMs interacts with the pre-training of language models.    </span>
+          <div id="foRephrase" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidRephrase").onclick = function() {
+                var theDiv = document.getElementById("foRephrase");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'The use of synthetic data has gained prominence in the paradigm of aligning pre-trained LLMs via instruction fine-tuning, and RLHF. For pre-training researchers have long relied on massive scrapes of the web to gather data. However, with model size growing, neural scaling laws suggest that we might run out of sufficient training data very soon.  Akin to fine-tuning, pre-training on machine-generated data serves as a viable alternative. However, there is little understanding of how synthetic data from LLMs interacts with the pre-training of language models. ';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'The use of synthetic data has gained prominence in the paradigm of aligning pre-trained LLMs via instruction fine-tuning, and RLHF. For pre-training researchers have long relied on massive scrapes of the web to gather data. However, with model size growing, neural scaling laws suggest that we might run out of sufficient training data very soon.  Akin to fine-tuning, pre-training on machine-generated data serves as a viable alternative. However, there is little understanding of how synthetic data from LLMs interacts with the pre-training of language models.  In this work, we explore synthetic data pre-training of LLMs from two different angles. First, we show that re-phrasing noisy web data is a better strategy than repeating the original data for pre-training an LLM. Second, we investigate the impact of re-phrasing style on the performance of the model, offering insights into how the composition of training data can impact the performance of LLMs in OOD settings. Across 21 domains of the Pile, we show that training an LLM on a combination of real and synthetic data improves perplexity by 5-10% on average, and performs similarly to training with twice the amount of real data. Our gains are attributed to the fact that re-phrased synthetic data have higher utility than repeated data because they (i) bring diversity in style, and (ii) have higher quality than web-scraped data, which is often unstructured, noisy, and poorly phrased. Finally, we perform a detailed analysis uncovering the properties of synthetic data that lead to better generalization. <br> <strong> Pratyush Maini, David Grangier, Richard Bai, Yizhe Zhang, Navdeep Jaitly </strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+        <TR>
+          <TD> <a href="https://arxiv.org/pdf/2309.03964.pdf"> REALM: Robust Entropy Adaptive Loss Minimization for ImprovedSingle-Sample Test-Time Adaptation </a> </TD>
+          <TD>  
+
+          <span id="showHidREALM"> We present a general framework for improving robustness of  F-TTA  to  these  noisy  samples,  inspired  by self-paced  learning  and  robust  loss  functions.   Our  proposed approach, Robust Entropy Adaptive Loss Minimization (REALM), achieves better adaptation accuracy  than previous approaches throughout the adaptation process oncorruptions of CIFAR-10 and ImageNet-1K, demonstrating its effectiveness.   </span>
+          <div id="foREALM" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidREALM").onclick = function() {
+                var theDiv = document.getElementById("foREALM");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'We present a general framework for improving robustness of  F-TTA  to  these  noisy  samples,  inspired  by self-paced  learning  and  robust  loss  functions.   Our  proposed approach, Robust Entropy Adaptive Loss Minimization (REALM), achieves better adaptation accuracy  than previous approaches throughout the adaptation process oncorruptions of CIFAR-10 and ImageNet-1K, demonstrating its effectiveness.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'Fully-test-time adaptation (F-TTA) can mitigate performance loss due to distribution shifts between train and test data (1) without access to the training data, and (2) with-out  knowledge  of  the  model  training  procedure.  In  online F-TTA, a pre-trained model is adapted using a stream of test samples by minimizing a self-supervised objective, such as entropy  minimization. However, models adapted with online using entropy minimization, are unstable especially in single sample settings, leading to degenerate solutions, and limiting the adoption of TTA inference strategies.  Prior works identify noisy, or unreliable, samples as a cause of failure in online F-TTA. One solution is to ignore these samples, which can lead to bias in the update procedure,  slow adaptation, and poor generalization. In this work, we present a general framework for improving robustness of  F-TTA  to  these  noisy  samples,  inspired  by self-paced  learning  and  robust  loss  functions.   Our  proposed approach, Robust Entropy Adaptive Loss Minimization (REALM), achieves better adaptation accuracy  than previous approaches throughout the adaptation process oncorruptions of CIFAR-10 and ImageNet-1K, demonstrating its effectiveness. <br> <strong> Barry Theobald, Federico Danieli, Navdeep Jaitly, and Dan Busbridge </strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+
+        <TR>
+          <TD> <a href="https://arxiv.org/pdf/2212.01562.pdf"> Understanding the Robustness of Multi-Exit Modelsunder Common Corruptions </a> </TD>
+          <TD>  
+
+          <span id="showHidMEM"> Multi-Exit models (MEMs) use an early-exit strategy to improve the accuracy and efficiency of deep neural networks (DNNs) by allowing samples to exit the network before the last layer.  However, the effectiveness of MEMs in the presence of distribution shifts remains largely unexplored.   </span>
+          <div id="foMEM" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidMEM").onclick = function() {
+                var theDiv = document.getElementById("foMEM");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'Multi-Exit models (MEMs) use an early-exit strategy to improve the accuracy and efficiency of deep neural networks (DNNs) by allowing samples to exit the network before the last layer.  However, the effectiveness of MEMs in the presence of distribution shifts remains largely unexplored.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'Multi-Exit models (MEMs) use an early-exit strategy to improve the accuracy and efficiency of deep neural networks (DNNs) by allowing samples to exit the network before the last layer.  However, the effectiveness of MEMs in the presence of distribution shifts remains largely unexplored. Our work examines how distribution shifts generated by common image corruptions affect the accuracy/efficiency of MEMs. We find that under common corruptions, early-exiting at the first correct exit reduces the inference cost and provides a significant boost in accuracy (≥10%) over exiting at the last layer. However, with realistic early-exit strategies, which do not assume knowledge about the correct exits, MEMs still reduce inference cost but provide a marginal improvement in accuracy (≈1%) compared to exiting at the last layer. Moreover, the presence of distribution shift widens the gap between an MEM’s maximum classification accuracy and realistic early-exit strategies by 5% on average compared with the gap on in-distribution data. Our empirical analysis shows that the lack of calibration due to a distribution shift increases the susceptibility of such early-exit strategies to exit early and increases misclassification rates. Furthermore, the lack of calibration increases the inconsistency in the predictions of the model across exits, leading to both inefficient inference and more misclassifications compared with evaluation on in-distribution data. Finally, we propose two metrics,underthinking and overthinking, that quantify the different behavior of practical early-exit strategy under distribution shifts, and provide insights into improving the practical utility of MEMs. <br> <strong> With Akshay Mehra, Navdeep Jaitly, Barry Theobald </strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+       </TR> 
+
+
+        <TR>
+          <TD> <a href="https://arxiv.org/pdf/2308.09514.pdf"> Spatial LibriSpeech: An Augmented Dataset for Spatial Audio Learning </a> </TD>
+          <TD>  
+
+          <span id="showHidSpat"> We  present  Spatial  LibriSpeech,  a  spatial  audio  dataset  withover  650  hours  of  19-channel  audio,  first-order  ambisonics, and optional distractor noise.  Spatial LibriSpeech is designed for machine learning model training, and it includes labels forsource  position,  speaking  direction,  room  acoustics  and  geometry.   </span>
+          <div id="foSpat" style="display:block"></div>
+
+          <script>
+            document.getElementById("showHidSpat").onclick = function() {
+                var theDiv = document.getElementById("foSpat");
+                if(theDiv.style.display == 'none') {
+                    theDiv.style.display = 'block';
+                    this.innerHTML = 'We  present  Spatial  LibriSpeech,  a  spatial  audio  dataset  withover  650  hours  of  19-channel  audio,  first-order  ambisonics, and optional distractor noise.  Spatial LibriSpeech is designed for machine learning model training, and it includes labels forsource  position,  speaking  direction,  room  acoustics  and  geometry.';
+                } else {
+                    theDiv.style.display = 'none';
+                    this.innerHTML = 'We  present  Spatial  LibriSpeech,  a  spatial  audio  dataset  withover  650  hours  of  19-channel  audio,  first-order  ambisonics, and optional distractor noise.  Spatial LibriSpeech is designed for machine learning model training, and it includes labels forsource  position,  speaking  direction,  room  acoustics  and  ge-ometry.  Spatial LibriSpeech is generated by augmenting LibriSpeech  samples  with  200k+  simulated  acoustic  conditions across 8k+ synthetic rooms.  To demonstrate the utility of our dataset, we train models on four spatial audio tasks, resultingin a median absolute error of 6.60° on 3D source localization, 0.43m on distance, 90.66ms on T30, and 2.74dB on direct-to-reverberant  ratio  estimation.   We  show  that  the  same  models generalize well to widely-used evaluation datasets, e.g., obtaining a median absolute error of 12.43° on 3D source localizationon TUT Sound Events 2018, and 157.32ms on T30 estimationon ACE Challenge. <br> <strong> With Miguel Sarabia, Elena Menyaylenko, Alessandro Toso, Zak Aldeneh, Luca Zappella, Barry Theobald, Nicholas Apostoloff, and Jonathan Sheaffer </strong> </br>';
+                }
+            }
+          </script>
+
+        </TD>
+       </TR>
+
+       </TR> 
 
         <TR>
           <TD> <a href="https://arxiv.org/pdf/2203.10117.pdf"> Towards a Perceptual Model for Estimating the Quality of Visual Speech </a> </TD>
@@ -272,7 +372,6 @@
 
         </TR> 
 
-       https://jointmathematicsmeetings.org/amsmtgs/2217_abstracts/1145-k5-2215.pdf
 
         <TR>
           <TD> Vehicle Routing Prediction </TD>
@@ -466,9 +565,6 @@
 
 
        </TR>
-
-
-
 
 
       </TABLE>
